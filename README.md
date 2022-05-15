@@ -47,3 +47,33 @@ sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
 
 sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 
+
+and to make permanent,  modify /etc/sysctl.conf I
+
+with
+
+net.ipv6.conf.all.disable_ipv6=1
+
+net.ipv6.conf.default.disable_ipv6=1
+
+net.ipv6.conf.lo.disable_ipv6=1
+
+followed by:
+
+sudo sysctl -p
+
+
+
+and also if required edit  /etc/rc.local 
+
+#!/bin/bash
+# /etc/rc.local
+
+/etc/sysctl.d
+/etc/init.d/procps restart
+
+exit 0
+
+Now use chmod command to make the file executable:
+
+sudo chmod 755 /etc/rc.local
