@@ -38,3 +38,12 @@ sudo ufw allow from {ip_address/mask} to any port 3389
 if not, need to access through a SSH Tunnel !
 
 
+
+
+### cloud server risk on IPv6 disable if not required:
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+
