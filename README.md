@@ -28,8 +28,9 @@ sudo systemctl restart xrdp
 
 
 
+#get your public IP with:   curl 'https://api.ipify.org?format=json'
 
-#restricting access from an IP is a must
+#restricting access from an IP is a must    
 
 sudo ufw allow from {ip_address/mask} to any port 3389
 
