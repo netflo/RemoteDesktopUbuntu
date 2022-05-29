@@ -98,4 +98,22 @@ Install Wine
 sudo apt install --install-recommends winehq-stable
 
 
+##### Secure delete of files  when not using SSD #####
+
+from https://www.howtogeek.com/425232/how-to-securely-delete-files-on-linux/
+
+The secure-delete commands use the following sequence of overwrites and actions:
+
+    1 overwrite with 0xFF value bytes.
+    5 overwrites with random data.
+    27 overwrites with special values defined by Peter Gutmann.
+    5 more overwrites with random data.
+    Rename the file to a random value.
+    Truncate the file.
+
+
+sudo apt-get install secure-delete
+
+srm -rvz the_folder_slash_directory
+
 
