@@ -63,7 +63,7 @@ sudo chmod 755 /etc/rc.local
 
 from https://wine.htmlvalidator.com/install-wine-on-ubuntu-20.04.html
 
-erify 64-bit architecture. The following command should respond with "amd64".
+Verify 64-bit architecture. The following command should respond with "amd64".
 
 $ dpkg --print-architecture
 
@@ -71,29 +71,30 @@ See if 32-bit architecture is installed. The following command should respond wi
 
 $ dpkg --print-foreign-architectures
 
-If "i386" is not displayed, execute the following.
+/////////////////////////////////////////////////////////////////////////////
+#If "i386" is not displayed, execute the following.
+sudo dpkg --add-architecture i386
 
-$ sudo dpkg --add-architecture i386
-
-Recheck with.
+#Recheck with.
 
 $ dpkg --print-foreign-architectures
-Add the WineHQ Ubuntu repository.
+#Add the WineHQ Ubuntu repository.
 
-Get and install the repository key.
+#Get and install the repository key.
 
-$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
 
-$ sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
+sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
 
-$ wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
+wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
 
-$ sudo mv winehq-focal.sources /etc/apt/sources.list.d/
+sudo mv winehq-focal.sources /etc/apt/sources.list.d/
 
-Update the package database.
+#Update the package database.
 
-$ sudo apt update
-Install Wine
+sudo apt update
+
+#Install Wine
 
 sudo apt install --install-recommends winehq-stable
 
