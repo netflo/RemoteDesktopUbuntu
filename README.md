@@ -135,9 +135,16 @@ sudo adduser encryption_facilitator
 
 sudo usermod -aG sudo encryption_facilitator
 
-sudo ecryptfs-migrate-home -u ~user_to_encrypt
+#login to encryption_facilitator
+su encryption_facilitator
+
+sudo ecryptfs-migrate-home -u user_to_encrypt
+
+
 
 #
+
+
 
 
 #Encrypt the Swap Space
