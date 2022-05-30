@@ -96,7 +96,7 @@ sudo apt update
 
 #Install Wine
 
-sudo apt install --install-recommends winehq-stable
+sudo apt install --install-recommends winehq-stable -y
 
 
 ##### Secure delete of files  when not using SSD #####
