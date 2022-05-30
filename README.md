@@ -119,3 +119,29 @@ sudo apt-get install secure-delete
 srm -rvz the_folder_slash_directory
 
 
+
+
+## Post install encryption of the home directory and swap:
+
+from https://jumpcloud.com/blog/how-to-encrypt-ubuntu-20-04-desktop-post-installation
+
+useradd -m user_to_encrypt
+
+sudo apt install ecryptfs-utils cryptsetup -y
+
+#add a new user to encrypt root
+
+sudo adduser encryption_facilitator
+
+sudo usermod -aG sudo encryption_facilitator
+
+sudo ecryptfs-migrate-home -u ~user_to_encrypt
+
+#
+
+
+#Encrypt the Swap Space
+
+swapon -s
+free -h
+
