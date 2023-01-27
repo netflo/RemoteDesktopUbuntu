@@ -152,3 +152,59 @@ sudo ecryptfs-migrate-home -u user_to_encrypt
 swapon -s
 free -h
 
+
+
+
+
+
+
+####################  new version 22 ############################
+
+Check installed architectures
+
+Verify 64-bit architecture. The following command should respond with "amd64".
+
+$ dpkg --print-architecture
+
+See if 32-bit architecture is installed. The following command should respond with "i386".
+
+$ dpkg --print-foreign-architectures
+
+If "i386" is not displayed, execute the following.
+
+$ sudo dpkg --add-architecture i386
+
+Recheck with.
+
+$ dpkg --print-foreign-architectures
+Download and add the WineHQ repository key
+
+$ sudo mkdir -pm755 /etc/apt/keyrings
+$ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+Download the WineHQ sources file
+
+$ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+Update the package database
+
+$ sudo apt update
+Install Wine
+
+The next command installs Wine Stable. To install Wine Development or Wine Staging, replace winehq-stable  by  winehq-devel or winehq-staging
+
+After a major Wine upgrade (from Wine 6 to Wine 7, for example), Wine Stable may temporarily be unavailable, but Wine Development and Wine Staging can still be installed.
+
+$ sudo apt install --install-recommends winehq-stable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
