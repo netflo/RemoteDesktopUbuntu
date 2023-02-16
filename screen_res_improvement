@@ -1,0 +1,21 @@
+sudo vi /etc/default/grub
+
+Change value of GRUB_CMDLINE_LINUX_DEFAULT with below. Replace 3840x2160 with your highest resolution.
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:3840x2160"
+
+Run below commands
+
+sudo update-grub
+
+sudo apt install linux-image-extra-virtual
+
+Shutdown the VM and open PowerShell as administrator on host machine and run below. Replace "ubuntu" with your vm name. Change "3840" and "2160" with your highest resolution.
+
+set-vmvideo -vmname ubuntu -horizontalresolution:3840  -verticalresolution:2160 -resolutiontype single
+
+This command may not be required. It is something I read on Kali blog.
+
+set-vm "Ubuntu" -EnhancedSessionTransportType HVSocket
+
+Start VM. Open Ubuntu Display settings and choose scale 200.
