@@ -1,0 +1,18 @@
+
+apt install ubuntu-mate-desktop
+
+get the h2o from h20 download 
+
+install sdk jre java v17
+
+install tightvnc
+
+vncserver :1
+
+install firefox
+
+XAUTHORITY=$HOME/.Xauthority
+export XAUTHORITY
+
+
+//note if the windows manager flickers, try to remote in quickly before the wnm is loaded as this is more stable
