@@ -1,5 +1,30 @@
 # RemoteDesktopUbuntu
 
+
+from https://blog.alphavps.com/how-to-install-a-gui-on-a-linux-vps/
+
+
+
+apt-mark hold acpid acpi-support
+
+Here is another set of commands, which you need to run.
+
+apt install xubuntu-desktop
+apt install xrdp
+adduser xrdp ssl-cert
+echo "startxfce4" > ~/.xsession
+chmod +x ~/.xsession
+systemctl restart xrdp.service
+
+
+
+
+
+
+
+
+
+
 from  https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop
 
 ### Remote Desktop on Ubuntu 20.04
