@@ -1,0 +1,50 @@
+as per https://ubuntu.com/tutorials/ubuntu-desktop-aws#1-overview
+
+sudo apt update
+sudo apt install ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal openjdk-17-jre-headless 
+sudo dpkg --add-architecture i386
+sudo apt install wine32
+
+vncserver :1
+
+Open the configuration file in vim:
+
+vim ~/.vnc/xstartup
+
+and edits as follows:
+
+    #!/bin/sh
+    
+    export XKL_XMODMAP_DISABLE=1
+    unset SESSION_MANAGER
+    unset DBUS_SESSION_BUS_ADDRESS
+    
+    [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+    [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+    xsetroot -solid grey
+    
+    vncconfig -iconic &
+    gnome-panel &
+    gnome-settings-daemon &
+    metacity &
+    gnome-terminal &
+
+
+
+
+
+reat! We’re almost done with the configuration. Now, let’s restart the VNC server by killing it first and then starting it up.
+
+To kill the vnc server and start it again, type the following command:
+
+vncserver -kill :1
+vncserver :1
+
+
+
+#AUtoML
+
+wget http://h2o-release.s3.amazonaws.com/h2o/rel-3.44.0/1/h2o-3.44.0.1.zip
+unzip ...
+
+
