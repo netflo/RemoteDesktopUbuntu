@@ -1,6 +1,14 @@
 # RemoteDesktopUbuntu
 
 
+from:  https://ubuntu.com/tutorials/ubuntu-desktop-aws#2-setting-up-tightvnc-on-aws
+sudo apt install ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+
+
+
+
+== or ===
+
 from https://blog.alphavps.com/how-to-install-a-gui-on-a-linux-vps/
 
 
