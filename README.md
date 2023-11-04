@@ -1,6 +1,9 @@
 # RemoteDesktopUbuntu
 
 
+latest advice: use instructions under file aws_working_remote_desktop
+
+
 from:  https://ubuntu.com/tutorials/ubuntu-desktop-aws#2-setting-up-tightvnc-on-aws
 sudo apt install ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 
