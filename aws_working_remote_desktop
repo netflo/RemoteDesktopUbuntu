@@ -1,3 +1,5 @@
+works on Ubuntu22
+
 as per https://ubuntu.com/tutorials/ubuntu-desktop-aws#1-overview
 
 sudo apt update
@@ -29,7 +31,8 @@ and edits as follows:
     metacity &
     gnome-terminal &
 
-
+    XAUTHORITY=$HOME/.Xauthority
+    export XAUTHORITY
 
 
 
@@ -47,4 +50,7 @@ vncserver :1
 wget http://h2o-release.s3.amazonaws.com/h2o/rel-3.44.0/1/h2o-3.44.0.1.zip
 unzip ...
 
+in order to start firefox remotely need to add the following if not add into xstartup:
 
+XAUTHORITY=$HOME/.Xauthority
+export XAUTHORITY
