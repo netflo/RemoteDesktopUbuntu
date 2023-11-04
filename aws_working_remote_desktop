@@ -13,13 +13,7 @@ Open the configuration file in vim:
 
 vim ~/.vnc/xstartup
 
-and edits as follows:
-
-    #!/bin/sh
-    
-    export XKL_XMODMAP_DISABLE=1
-    unset SESSION_MANAGER
-    unset DBUS_SESSION_BUS_ADDRESS
+and edits as follows at the bottom:
     
     [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
     [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
