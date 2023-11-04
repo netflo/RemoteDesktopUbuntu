@@ -31,9 +31,6 @@ and edits as follows:
     metacity &
     gnome-terminal &
 
-    XAUTHORITY=$HOME/.Xauthority
-    export XAUTHORITY
-
 
 
 reat! We’re almost done with the configuration. Now, let’s restart the VNC server by killing it first and then starting it up.
@@ -52,9 +49,12 @@ unzip ...
 
 in order to start firefox remotely need to add the following if not add into xstartup:
 
+xhost +localhost
+
+or potentially:   
 XAUTHORITY=$HOME/.Xauthority
 export XAUTHORITY
 
 
-or potentially:   xhost +localhost
+
 
