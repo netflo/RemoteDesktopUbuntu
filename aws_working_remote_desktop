@@ -26,8 +26,7 @@ and edits as follows at the bottom:
     gnome-terminal &
 
 
-
-reat! We’re almost done with the configuration. Now, let’s restart the VNC server by killing it first and then starting it up.
+Great! We’re almost done with the configuration. Now, let’s restart the VNC server by killing it first and then starting it up.
 
 To kill the vnc server and start it again, type the following command:
 
@@ -36,18 +35,19 @@ vncserver :1
 
 
 
+then permission to start firefox or any GUI app
+xhost +localhost
+
+
+
 #AUtoML
 
 wget http://h2o-release.s3.amazonaws.com/h2o/rel-3.44.0/1/h2o-3.44.0.1.zip
 unzip ...
 
-in order to start firefox remotely need to add the following if not add into xstartup:
 
-xhost +localhost
 
-or potentially:   
-XAUTHORITY=$HOME/.Xauthority
-export XAUTHORITY
+
 
 
 
