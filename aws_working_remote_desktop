@@ -54,3 +54,7 @@ in order to start firefox remotely need to add the following if not add into xst
 
 XAUTHORITY=$HOME/.Xauthority
 export XAUTHORITY
+
+
+or potentially:   xhost +localhost
+
