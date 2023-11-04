@@ -5,7 +5,7 @@ as per https://ubuntu.com/tutorials/ubuntu-desktop-aws#1-overview
 sudo apt update
 sudo apt install -yy ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal openjdk-17-jre-headless 
 sudo dpkg --add-architecture i386
-sudo apt install -yy wine32
+sudo apt install -yy wine wine32
 
 vncserver :1
 
