@@ -8,6 +8,11 @@ from:  https://ubuntu.com/tutorials/ubuntu-desktop-aws#2-setting-up-tightvnc-on-
 sudo apt install ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
 
 
+and to launch this on higher res on port 51033:  vncserver :33 -geometry 1600x1200 
+
+and need to install gecko to get a web browser ieexplorer.   wine-gecko
+
+
 
 
 == or ===
