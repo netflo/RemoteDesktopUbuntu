@@ -1,5 +1,10 @@
 # RemoteDesktopUbuntu
 
+as of 2024 this is the best link:
+https://learn.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop?tabs=azure-cli
+
+
+#
 
 latest advice: use instructions under file aws_working_remote_desktop
 
