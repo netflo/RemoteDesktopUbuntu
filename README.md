@@ -1,5 +1,9 @@
 # RemoteDesktopUbuntu
 
+https://www.skynats.com/blog/install-ubuntu-desktop-on-a-digitalocean-droplet/
+
+
+
 
 dpkg --add-architecture i386
 apt update
