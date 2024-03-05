@@ -1,5 +1,12 @@
 # RemoteDesktopUbuntu
 
+
+dpkg --add-architecture i386
+apt update
+apt install wine32
+
+
+
 as of 2024 this is the best link:
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop?tabs=azure-cli
 
