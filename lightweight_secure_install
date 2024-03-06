@@ -1,0 +1,23 @@
+#ubuntu remote on 1 vCPU + 2GB RAM for wine with MT4
+
+#install ubuntu 23 or 22
+follow this link: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
+
+#create a new user account flo
+useradd -m flo
+passwd flo
+
+#ensure user can login ok 
+#ensure can   su -  
+#ensure cloud firewall only allows SSH
+#ensure remote access via bVNC Pro on VNC + SSH
+
+#remote root from login (extra password to get to root remotely)
+edit /etc/ssh/ssh_config    and remove permit root login
+
+#setup auto complete for new user flo: 
+edit   ~/.bashrc   and add the follwing
+
+#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#    . /etc/bash_completion
+#fi
