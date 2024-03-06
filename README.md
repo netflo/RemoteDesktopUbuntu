@@ -3,7 +3,7 @@
 https://www.skynats.com/blog/install-ubuntu-desktop-on-a-digitalocean-droplet/
 
 + change RDP port to 12801  by mod'ying /etc/xrdp/xrdp.ini
-
++ sudo systemctl restart xrdp
 
 ==
 
