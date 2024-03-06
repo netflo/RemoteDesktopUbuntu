@@ -16,6 +16,8 @@ passwd flo
 
 #remote root from login (extra password to get to root remotely)
 edit /etc/ssh/ssh_config    and remove permit root login
+then: service ssh restart
+
 
 #ref auto complete for new user flo: 
 just enter bash rather than sh !!!
