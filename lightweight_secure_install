@@ -3,7 +3,9 @@
 #install ubuntu 23 or 22
 follow this link: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
-#create a new user account flo
+replace for a wider screen onport 33:   vncserver -geometry 1600x900 :33
+
+#create a new user account for example below is using user: flo
 useradd -m flo
 passwd flo
 
