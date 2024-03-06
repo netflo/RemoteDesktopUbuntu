@@ -47,4 +47,18 @@ sudo mount /dev/mapper/my_encrypted_volume /mnt/volume_lon1_02
 
 
 
+##my start up file
+
+
+vncserver -geometry 1600x900 :33
+
+sudo cryptsetup open /dev/sda my_encrypted_volume
+
+sudo mount /dev/mapper/my_encrypted_volume /mnt/volume_lon1_02
+
+cd /mnt/volume_lon1_02/Pepper4/
+
+wine ter*
+
+
 
