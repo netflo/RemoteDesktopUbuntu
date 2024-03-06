@@ -21,3 +21,30 @@ then: service ssh restart
 
 #ref auto complete for new user flo: 
 just enter bash rather than sh !!!
+
+
+volume encryption of extra/external disk:
+
+#if volume is mounted
+sudo umount /mnt/volume_lon1_02
+
+sudo cryptsetup luksFormat /dev/sda
+
+sudo cryptsetup open /dev/sda my_encrypted_volume
+
+sudo mkfs.ext4 /dev/mapper/my_encrypted_volume
+
+sudo mount /dev/mapper/my_encrypted_volume /mnt/volume_lon1_02
+
+
+##after a reboot will need to do the manual steps (could automate but defeats)
+
+sudo cryptsetup open /dev/sda my_encrypted_volume
+
+sudo mount /dev/mapper/my_encrypted_volume /mnt/volume_lon1_02
+
+
+
+
+
+
