@@ -1,5 +1,10 @@
 # RemoteDesktopUbuntu
 
+lightweight X display:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
+
+
+
 https://www.skynats.com/blog/install-ubuntu-desktop-on-a-digitalocean-droplet/
 
 + change RDP port to 12801  by mod'ying /etc/xrdp/xrdp.ini
