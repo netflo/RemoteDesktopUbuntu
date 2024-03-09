@@ -1,5 +1,16 @@
 # RemoteDesktopUbuntu
 
+ban brute forcing IPs
+apt install fail2ban 
+copy the /etc/fail2ban/jail.conf  to  jail.local  and edit it as follows:
+enable SSHD = true
+(if use iptables to change port then leave to port 22)
+then systemctl start fail2ban
+then systemctl enable fail2ban
+
+check working with then  fail2ban-client status sshd
+
+
 
 iptables -t nat -A PREROUTING -p tcp --dport [replacewithhighport_above_1024] -j REDIRECT --to-port 22
 save across reboots with:
