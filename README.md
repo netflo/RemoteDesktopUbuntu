@@ -1,5 +1,10 @@
 # RemoteDesktopUbuntu
 
+
+iptables -t nat -A PREROUTING -p tcp --dport [replacewithhighport_above_1024] -j REDIRECT --to-port 22
+save across reboots with:
+apt install iptables-persistent
+
 lightweight X display and as a service:
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04
 
