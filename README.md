@@ -1,5 +1,17 @@
 # RemoteDesktopUbuntu
 
+winetricks:
+
+sudo apt update
+sudo apt install winetricks
+winetricks ie8
+
+#  winetricks list-all | grep -E 'edge|chromium|ie'
+
+
+###
+
+
 ban brute forcing IPs
 apt install fail2ban 
 copy the /etc/fail2ban/jail.conf  to  jail.local  and edit it as follows:
