@@ -31,6 +31,16 @@ https://www.skynats.com/blog/install-ubuntu-desktop-on-a-digitalocean-droplet/
 
 ==
 
+apt install xterm  -- if xterm does not start after updating xterm:
+
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+xterm &
+
+
+==
+
 
 dpkg --add-architecture i386
 apt update
