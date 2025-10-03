@@ -14,3 +14,6 @@ exec startxfce4
 
 vncserver :1 -geometry 1800x1080 -depth 24
 
+
+#for firefox etc...
+xhost +127.0.0.1
